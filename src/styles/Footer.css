@@ -1,0 +1,9 @@
+/* Pied de page */
+.Footer {
+    grid-area: ft;
+    /* Fond noir, texte blanc */
+    background-color: black;
+    color: white;
+    /* Hauteur fixée à 5em (80px sur ordinateur) */
+    height: 5em;
+}

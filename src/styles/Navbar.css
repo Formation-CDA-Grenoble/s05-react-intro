@@ -1,0 +1,10 @@
+/* Barre de navigation */
+.Navbar {
+    grid-area: hd;
+    /* Fond bleu, texte blanc */
+    background-color: blue;
+    color: white;
+    /* Taille de la ligne fixée à 3em (48px sur ordinateur) */
+    line-height: 3em;
+}
+  

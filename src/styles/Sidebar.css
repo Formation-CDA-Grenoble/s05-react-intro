@@ -1,0 +1,5 @@
+.Sidebar {
+    grid-area: sd;
+  
+    background-color: lightblue;
+}
