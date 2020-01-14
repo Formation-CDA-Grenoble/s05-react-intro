@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import logo from './logo.svg';
 import './App.css';
 
-import ArticlesListPage from './pages/ArticlesListPage';
-import ArticlePage from './pages/ArticlePage';
+import { ArticlePage, ArticlesListPage } from './pages';
+
 
 function App() {
   return (

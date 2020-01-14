@@ -20,11 +20,9 @@ class Page extends React.Component {
       newArticleId = 0;
     }
     this.setState({ articleId: newArticleId });
-    console.log(this.state.articleId);
   }
   
   render = function() {
-    console.log(this.props);
     const articleData = data[this.state.articleId];
 
     return (

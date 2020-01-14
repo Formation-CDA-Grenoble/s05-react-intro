@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import '../styles/Article.css';
 
 function Article(props) {
-  console.log(props);
   const id = props.id;
 
   return (
