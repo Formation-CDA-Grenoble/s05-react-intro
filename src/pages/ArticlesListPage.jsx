@@ -8,8 +8,11 @@ import data from '../data';
 
 
 function generateArticles(data) {
-  return data.map(function(item) {
-    return <Article title={item.title} text={item.text} />;
+  return data.map(function(item, index) {
+    return <Article
+      title={item.title}
+      text={item.text}
+      id={index} />;
   });
 }
 

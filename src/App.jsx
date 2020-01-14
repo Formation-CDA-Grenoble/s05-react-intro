@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter, Route, useParams } from "react-router-dom";
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,7 +9,10 @@ import ArticlePage from './pages/ArticlePage';
 
 function App() {
   return (
-    <ArticlesListPage />
+    <BrowserRouter>
+      <Route path="/article/:id" component={ArticlePage} />
+      <Route exact path="/" component={ArticlesListPage} />
+    </BrowserRouter>
   );
 }
 
