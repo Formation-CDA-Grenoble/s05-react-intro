@@ -15,6 +15,6 @@ function Article(props) {
 Article.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-}
+};
 
 export default Article;
