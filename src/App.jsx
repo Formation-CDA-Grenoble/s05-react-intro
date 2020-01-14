@@ -7,7 +7,7 @@ import ArticlePage from './pages/ArticlePage';
 
 function App() {
   return (
-    <ArticlePage />
+    <ArticlesListPage />
   );
 }
 

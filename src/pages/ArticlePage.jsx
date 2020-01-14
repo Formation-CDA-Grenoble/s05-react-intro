@@ -1,16 +1,10 @@
 import React from 'react';
 
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
 import Article from '../components/Article';
 
+import Layout from '../components/Layout';
 
-const data = [
-  { title: "Bonjour Grenoble!", text: "Salut les copains" },
-  { title: "Mon beau titre", text: "Comment allez-vous?" },
-  { title: "Angular est-il en perte de vitesse?", text: "On dirait bien..." },
-];
+import data from '../data';
 
 
 class Page extends React.Component {
@@ -19,7 +13,10 @@ class Page extends React.Component {
   };
 
   nextArticle = () => {
-    const newArticleId = this.state.articleId + 1;
+    let newArticleId = this.state.articleId + 1;
+    if (newArticleId >= data.length) {
+      newArticleId = 0;
+    }
     this.setState({ articleId: newArticleId });
     console.log(this.state.articleId);
   }
@@ -28,15 +25,10 @@ class Page extends React.Component {
     const articleData = data[this.state.articleId];
 
     return (
-      <div id="container">
-        <Navbar />
-        <main>
-          <Article title={articleData.title} text={articleData.text} />
-          <button onClick={this.nextArticle}>Article suivant</button>
-        </main>
-        <Sidebar />
-        <Footer />
-      </div>
+      <Layout>
+        <Article title={articleData.title} text={articleData.text} />
+        <button onClick={this.nextArticle}>Article suivant</button>
+      </Layout>
     );
   }
 }

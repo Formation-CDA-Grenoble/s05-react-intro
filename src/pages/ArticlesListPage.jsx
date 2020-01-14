@@ -1,16 +1,11 @@
 import React from 'react';
 
-import Navbar from '../components/Navbar';
-import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
+import Layout from '../components/Layout';
+
 import Article from '../components/Article';
 
+import data from '../data';
 
-const data = [
-  { title: "Bonjour Grenoble!", text: "Salut les copains" },
-  { title: "Mon beau titre", text: "Comment allez-vous?" },
-  { title: "Angular est-il en perte de vitesse?", text: "On dirait bien..." },
-];
 
 function generateArticles(data) {
   return data.map(function(item) {
@@ -20,14 +15,9 @@ function generateArticles(data) {
 
 function Page() {
   return (
-    <div id="container">
-      <Navbar />
-      <main>
-        {generateArticles(data)}
-      </main>
-      <Sidebar />
-      <Footer />
-    </div>
+    <Layout>
+      {generateArticles(data)}
+    </Layout>
   );
 }
 
