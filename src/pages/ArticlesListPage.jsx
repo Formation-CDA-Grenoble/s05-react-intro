@@ -1,8 +1,6 @@
 import React from 'react';
 
-import Layout from '../components/Layout';
-
-import Article from '../components/Article';
+import { Layout, Article } from '../components';
 
 import data from '../data';
 

@@ -2,9 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Article from '../components/Article';
-
-import Layout from '../components/Layout';
+import { Layout, Article } from '../components';
 
 import data from '../data';
 
